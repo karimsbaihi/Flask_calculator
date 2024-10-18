@@ -25,5 +25,14 @@ def calculate(operation, numberA, numberB):
 
 
     return jsonify({'status': 400, 'result':'code not completed'}), 400
+
+@app.route('/')
+def home():
+    return jsonify({
+        'status': 400,
+        'error': 'Invalid URL format. Please use the format: /operation/numberA/numberB',
+        'example': '/add/1/2, /minus/5/3, /multiply/2/4, /divide/8/2'
+    })
+
 if __name__ == '__main__':
     app.run(debug=True)
