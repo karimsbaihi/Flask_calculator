@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
@@ -28,9 +28,10 @@ def calculate(operation, numberA, numberB):
 
 @app.route('/')
 def home():
+    base_url = request.host_url.rstrip('/')
     return jsonify({
         'status': 400,
-        'error': 'Invalid URL format. Please use the format: /operation/numberA/numberB',
+        'error': 'Invalid URL format. Please use the format:' + f'{base_url}/operation/numberA/numberB',
         'example': '/add/1/2, /minus/5/3, /multiply/2/4, /divide/8/2'
     })
 
