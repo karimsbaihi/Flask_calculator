@@ -12,8 +12,10 @@ def calculate(operation, numberA, numberB):
         return jsonify({'status': 400, 'error': 'Invalid input. Please provide numbers.'}), 400
 
     #here you write the operations using if/else 
+
+
     '''
-    2. Custom Error Handling:
+    some information you might need
 
     You can use different status codes to indicate specific conditions. For instance:
         A status of 200 indicates success.
