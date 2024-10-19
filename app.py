@@ -25,7 +25,7 @@ def calculate(operation, numberA, numberB):
     '''
 
 
-    return jsonify({'status': 400, 'result':'code not completed'}), 400
+    return jsonify({'status': 400, 'result':f"{operation} operation not implemented yet"}), 400
 
 @app.route('/')
 def home():
