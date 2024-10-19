@@ -12,7 +12,8 @@ def calculate(operation, numberA, numberB):
         return jsonify({'status': 400, 'error': 'Invalid input. Please provide numbers.'}), 400
 
     #here you write the operations using if/else 
-
+    if  operation == 'add':
+        return jsonify({'status': 200, 'result': numberA + numberB}), 200
 
     '''
     some information you might need
