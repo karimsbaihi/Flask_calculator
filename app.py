@@ -14,7 +14,10 @@ def calculate(operation, numberA, numberB):
     #here you write the operations using if/else 
     if  operation == 'add':
         return jsonify({'status': 200, 'result': numberA + numberB}), 200
-
+    
+    elif operation =='minus':
+        return jsonify({'status':200, 'result':numberA - numberB}), 200
+         
     '''
     some information you might need
 
@@ -23,7 +26,6 @@ def calculate(operation, numberA, numberB):
         A status of 400 can indicate a bad request (like division by zero).
         A status of 500 can be used for server errors.
     '''
-
 
     return jsonify({'status': 400, 'result':f"{operation} operation not implemented yet"}), 400
 
