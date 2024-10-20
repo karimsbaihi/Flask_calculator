@@ -14,13 +14,16 @@ def calculate(operation, numberA, numberB):
     #here you write the operations using if/else 
     if  operation == 'add':
         return jsonify({'status': 200, 'result': numberA + numberB}), 200
-
-
+    
     #Division operation: 
     elif operation == 'divide':
         if numberB == 0:
             return jsonify ({'status':400 , 'error': 'Division by zero is not allowed!'}), 400
         return jsonify({'status': 200, 'result': numberA / numberB}), 200
+    
+    #multiplication operation:
+    elif operation == 'multiply':
+        return jsonify({'status': 200, 'result': numberA * numberB}), 200
     
     elif operation =='minus':
         return jsonify({'status':200, 'result':numberA - numberB}), 200
